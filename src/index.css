@@ -90,6 +90,8 @@
   }
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 @layer base {
   * {
     @apply border-border;
@@ -97,5 +99,26 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-minecraft {
+    font-family: "Press Start 2P", monospace;
+  }
+
+  .pixelated {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+
+  .hover-scale {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
   }
 }
